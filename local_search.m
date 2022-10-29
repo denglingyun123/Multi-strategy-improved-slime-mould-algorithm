@@ -1,4 +1,4 @@
-function [x_best,f_best]=local_search(x_best,f_best,fobj,dim)%Input parameters£¬"x_best" is the current best solution£¬"fobj" is the objective function
+function [x_best,f_best]=local_search(x_best,f_best,fobj,dim)%Input parametersÂ£Â¬"x_best" is the current best solutionÂ£Â¬"fobj" is the objective function
 
 % Parameters initialization
 E=100;% Stop criterion:epoches(E)
@@ -41,13 +41,18 @@ while epoch<E
             n=n+1;
             continue;
         end
+        
+        % To avoid getting into the situation of calculating the value of the objective function all the time, the number of function evaluations is limited.
         if count>=40000
             break
         end
+        
     end
+    
     if count>=40000
             break
     end
+    
     alpha=alpha*0.5;
 end
         
