@@ -11,7 +11,7 @@ Max_iteration=1000; % Maximum numbef of iterations
 %% Comparisons of each algorithm
 Max_test=30;
 for i=1:Max_test
-    disp(['µÚ',num2str(i),'´ÎÊµÑé']);
+    disp(['ç¬¬',num2str(i),'æ¬¡å®éªŒ']);
 % %     Slime mould algorithm(SMA)
     [Best_pos1(i,:),Best_score1(i),SMA_curve(i,:)]=SMA(SearchAgents_no,Max_iteration,lb,ub,dim,fobj);
 % %     Improved slime mould algorithm(ISMA)
@@ -32,16 +32,16 @@ box on
 legend('SMA','MSMA')
 
 disp('-------------------------------------------------')
-display(['SMA 30´ÎÊµÑé×îÓÅÊÊÓ¦¶ÈÖµ(Best) : ', num2str(min(Best_score1))]);
-display(['SMA 30´ÎÊµÑé×î²îÊÊÓ¦¶ÈÖµ(wrost) : ', num2str(max(Best_score1))]);
-display(['SMA 30´ÎÊµÑé×îÓÅ½â¶ÔÓ¦µÄÆ½¾ùÊÊÓ¦¶ÈÖµ(mean) : ', num2str(mean(Best_score1))]);
-display(['SMA 30´ÎÊµÑé±ê×¼²î£¨std£© : ', num2str(std(Best_score1))]);
+display(['SMA 30æ¬¡å®éªŒæœ€ä¼˜é€‚åº”åº¦å€¼(Best) : ', num2str(min(Best_score1))]);
+display(['SMA 30æ¬¡å®éªŒæœ€å·®é€‚åº”åº¦å€¼(worst) : ', num2str(max(Best_score1))]);
+display(['SMA 30æ¬¡å®éªŒæœ€ä¼˜è§£å¯¹åº”çš„å¹³å‡é€‚åº”åº¦å€¼(mean) : ', num2str(mean(Best_score1))]);
+display(['SMA 30æ¬¡å®éªŒæ ‡å‡†å·®ï¼ˆstdï¼‰ : ', num2str(std(Best_score1))]);
 
 disp('-------------------------------------------------')
-display(['MSMA 30´ÎÊµÑé×îÓÅÊÊÓ¦¶ÈÖµ(Best) : ', num2str(min(Best_score2))]);
-display(['MSMA 30´ÎÊµÑé×î²îÊÊÓ¦¶ÈÖµ(wrost) : ', num2str(max(Best_score2))]);
-display(['MSMA 30´ÎÊµÑé×îÓÅ½â¶ÔÓ¦µÄÆ½¾ùÊÊÓ¦¶ÈÖµ(mean) : ', num2str(mean(Best_score2))]);
-display(['MSMA 30´ÎÊµÑé±ê×¼²î£¨std£© : ', num2str(std(Best_score2))]);
+display(['MSMA 30æ¬¡å®éªŒæœ€ä¼˜é€‚åº”åº¦å€¼(Best) : ', num2str(min(Best_score2))]);
+display(['MSMA 30æ¬¡å®éªŒæœ€å·®é€‚åº”åº¦å€¼(worst) : ', num2str(max(Best_score2))]);
+display(['MSMA 30æ¬¡å®éªŒæœ€ä¼˜è§£å¯¹åº”çš„å¹³å‡é€‚åº”åº¦å€¼(mean) : ', num2str(mean(Best_score2))]);
+display(['MSMA 30æ¬¡å®éªŒæ ‡å‡†å·®ï¼ˆstdï¼‰ : ', num2str(std(Best_score2))]);
 
 
 
