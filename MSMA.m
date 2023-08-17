@@ -1,5 +1,5 @@
 %_________________________________________________________________________%
-%Multi-strategy improved slime mould algorithm (MSMA) ¡ªLingyun Deng,Sanyang Liu
+%Multi-strategy improved slime mould algorithm (MSMA) Â¡ÂªLingyun Deng,Sanyang Liu
 %_________________________________________________________________________%
 function [Best_pos,Best_score,curve]=MSMA(pop,Max_iter,lb,ub,dim,fobj)
 tic
@@ -74,7 +74,7 @@ while l< Max_iter+1
 %                 A = randi([1,pop]);  
                 B = randi([1,pop]);
                 if r<p    
-                    X(i,j) = X(B,j)+ vb(j)*(W(i,j)*GBestX(j)-X(B,j));   
+                    X(i,j) = GBestX(j)+ vb(j)*(W(i,j)*GBestX(j)-X(B,j));   
                 else
                     X(i,j) = vc(j)*X(i,j);
                 end
